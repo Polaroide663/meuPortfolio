@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfólio de Guilherme, desenvolvedor web e backend apaixonado por Python, C#, e tecnologias modernas.">
+  <meta name="keywords" content="desenvolvedor, Python, C#, JavaScript, web, backend">
   <title>Guilherme | Dev Criativo</title>
 
   <!-- Tailwind CSS -->
@@ -17,90 +19,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-    }
-
-    /* Efeito de digitação */
-    .typing-effect::after {
-      content: '|';
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    /* Botão com borda animada */
-    .glow-button {
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .glow-button::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
-      z-index: -1;
-    }
-
-    .glow-button:hover::before {
-      transform: translateX(100%);
-    }
-
-    /* Card de projeto com efeito 3D */
-    .project-card {
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-12px) rotateX(5deg);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Ícones flutuantes */
-    .floating-icon {
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .floating-icon:hover {
-      transform: scale(1.2) rotate(10deg);
-    }
-
-    /* Efeito de linha animada nos títulos */
-    .title-underline {
-      position: relative;
-      display: inline-block;
-    }
-
-    .title-underline::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background: #0a5c9c;
-      transition: width 0.6s ease;
-    }
-
-    .title-underline:hover::after {
-      width: 100%;
-    }
-
-    /* Scroll suave */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -114,15 +34,15 @@
       <a href="#contato" class="hover:text-indigo-700 font-medium transition">Contato</a>
     </div>
     <div class="flex space-x-4">
-      <a href="https://wa.me/5579998122023" target="_blank" class="text-green-500 hover:text-green-700 transition text-xl"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/guilherme_xiix/" target="_blank" class="text-pink-500 hover:text-pink-700 transition text-xl"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/Polaroide663" target="_blank" class="text-gray-800 hover:text-gray-900 transition text-xl"><i class="fab fa-github"></i></a>
+      <a href="https://wa.me/5579998122023" target="_blank" class="text-green-500 hover:text-green-700 transition text-xl" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/guilherme_xiix/" target="_blank" class="text-pink-500 hover:text-pink-700 transition text-xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Polaroide663" target="_blank" class="text-gray-800 hover:text-gray-900 transition text-xl" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
   </nav>
 
   <!-- Hero Section com Imagem de Fundo e Efeito de Digitação -->
   <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-indigo-900 text-white overflow-hidden">
-    <!-- Overlay de partículas (opcional visual) -->
+    <!-- Overlay de partículas -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-white blur-3xl"></div>
       <div class="absolute bottom-32 right-20 w-48 h-48 rounded-full bg-indigo-400 blur-3xl"></div>
@@ -150,7 +70,7 @@
 
     <!-- Setinha para rolar -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#sobre" class="text-white text-2xl"><i class="fas fa-chevron-down"></i></a>
+      <a href="#sobre" class="text-white text-2xl" aria-label="Rolar para Sobre"><i class="fas fa-chevron-down"></i></a>
     </div>
   </section>
 
@@ -158,14 +78,19 @@
   <section id="sobre" class="py-20 px-6 bg-white">
     <div class="max-w-5xl mx-auto text-center mb-16">
       <h2 class="text-4xl font-bold title-underline inline-block mb-6">Sobre Mim</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
         Tenho 17 anos, curso Técnico em Desenvolvimento de Sistemas no SENAI e sou apaixonado por transformar ideias em código funcional, limpo e escalável.
       </p>
     </div>
 
     <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
       <div class="flex-1">
-        <img src="imagens/eu.jpg" alt="Guilherme" class="rounded-2xl shadow-2xl w-full max-w-xs mx-auto md:mx-0">
+        <img src="imagens/eu.jpg" 
+             srcset="imagens/eu-small.jpg 320w, imagens/eu.jpg 640w" 
+             sizes="(max-width: 768px) 320px, 640px"
+             alt="Foto de Guilherme" 
+             class="rounded-2xl shadow-2xl w-full max-w-xs mx-auto md:mx-0" 
+             loading="lazy">
       </div>
       <div class="flex-1 text-gray-700 space-y-4">
         <p class="text-lg leading-relaxed">
@@ -188,32 +113,26 @@
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-5xl mx-auto">
-      <!-- Habilidade 1 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fab fa-python text-4xl text-indigo-600 mb-3"></i>
         <span class="font-medium">Python</span>
       </div>
-      <!-- Habilidade 2 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fas fa-code text-4xl text-gray-800 mb-3"></i>
         <span class="font-medium">C#</span>
       </div>
-      <!-- Habilidade 3 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fas fa-database text-4xl text-blue-600 mb-3"></i>
         <span class="font-medium">SQL</span>
       </div>
-      <!-- Habilidade 4 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fab fa-js text-4xl text-yellow-500 mb-3"></i>
         <span class="font-medium">JavaScript</span>
       </div>
-      <!-- Habilidade 5 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
         <span class="font-medium">HTML</span>
       </div>
-      <!-- Habilidade 6 -->
       <div class="floating-icon bg-white p-6 rounded-2xl shadow-md flex flex-col items-center hover:shadow-xl transition">
         <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
         <span class="font-medium">CSS</span>
@@ -222,258 +141,274 @@
   </section>
 
   <!-- Projetos com Cards Animados -->
-  <!-- Projetos com Cards Animados -->
-<section id="projetos" class="py-20 px-6 bg-white">
-  <div class="max-w-5xl mx-auto text-center mb-16">
-    <h2 class="text-4xl font-bold title-underline inline-block mb-6">Projetos Interativos</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Projetos funcionais que desenvolvi para aplicar meus conhecimentos — todos rodando diretamente no navegador!
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    
-    <!-- Projeto 1: Buscador CEP + Clima -->
-    <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
-      <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
-        <span class="text-white text-xl font-bold text-center px-4">CEP + Clima</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold mb-2">Busca Inteligente</h3>
-        <p class="text-gray-600 mb-4">Digite um CEP e veja endereço + previsão do tempo da cidade em tempo real.</p>
-        <button onclick="abrirModal('modal-clima')" class="glow-button inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700">
-          Experimentar
-        </button>
-      </div>
+  <section id="projetos" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center mb-16">
+      <h2 class="text-4xl font-bold title-underline inline-block mb-6">Projetos Interativos</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Projetos funcionais que desenvolvi para aplicar meus conhecimentos — todos rodando diretamente no navegador!
+      </p>
     </div>
 
-    <!-- Projeto 2: Calculadora de IMC -->
-    <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
-      <div class="h-48 bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
-        <span class="text-white text-xl font-bold text-center px-4">Calculadora de IMC</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold mb-2">Saúde & Bem-estar</h3>
-        <p class="text-gray-600 mb-4">Calcule seu Índice de Massa Corporal com interface interativa e resposta instantânea.</p>
-        <button onclick="abrirModal('modal-imc')" class="glow-button inline-block px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">
-          Experimentar
-        </button>
-      </div>
-    </div>
-
-    <!-- Projeto 3: Gerenciador de Tarefas -->
-    <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
-      <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
-        <span class="text-white text-xl font-bold text-center px-4">Minhas Tarefas</span>
-      </div>
-      <div class="p-6">
-        <h3 class="text-xl font-bold mb-2">Organização Pessoal</h3>
-        <p class="text-gray-600 mb-4">Adicione, visualize e remova tarefas — tudo salvo localmente no seu navegador.</p>
-        <button onclick="abrirModal('modal-tarefas')" class="glow-button inline-block px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700">
-          Experimentar
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modais dos Projetos -->
-<!-- Modal Clima -->
-<div id="modal-clima" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden">
-  <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-    <div class="p-6">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-indigo-800">Busca CEP + Clima</h3>
-        <button onclick="fecharModal('modal-clima')" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-      </div>
-
-      <!-- Campo de CEP -->
-      <div class="mb-6">
-        <label for="cep-modal" class="block text-lg font-medium text-gray-700 mb-2">Digite o CEP (apenas números)</label>
-        <div class="flex gap-2">
-          <input 
-            type="text" 
-            id="cep-modal" 
-            placeholder="Ex: 01001000" 
-            maxlength="8"
-            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-            oninput="formatarCEP(this)"
-            onkeypress="if(event.key==='Enter') buscarCEP()"
-          >
-          <button 
-            onclick="buscarCEP()" 
-            id="btn-buscar-modal"
-            class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition flex items-center gap-2"
-          >
-            <i class="fas fa-search"></i>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <!-- Projeto 1: Buscador CEP + Clima -->
+      <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
+          <span class="text-white text-xl font-bold text-center px-4">CEP + Clima</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Busca Inteligente</h3>
+          <p class="text-gray-700 mb-4">Digite um CEP e veja endereço + previsão do tempo da cidade em tempo real.</p>
+          <button onclick="abrirModal('modal-clima')" class="glow-button inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700" aria-label="Experimentar Busca CEP + Clima">
+            Experimentar
           </button>
         </div>
-        <p id="erro-clima" class="mt-2 text-red-500 text-sm hidden"></p>
       </div>
 
-      <!-- Resultado -->
-      <div id="resultado-clima" class="hidden">
-        <div class="bg-gray-50 rounded-xl p-4 mb-4">
-          <h4 class="font-bold text-gray-800 mb-2">Endereço</h4>
-          <p id="endereco-completo" class="text-gray-700"></p>
+      <!-- Projeto 2: Calculadora de IMC -->
+      <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="h-48 bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
+          <span class="text-white text-xl font-bold text-center px-4">Calculadora de IMC</span>
         </div>
-        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 text-white">
-          <h4 class="font-bold mb-2">Previsão do Tempo</h4>
-          <div class="flex justify-between items-center">
-            <div>
-              <p class="text-3xl font-bold" id="temp-clima">—°C</p>
-              <p id="condicao-clima" class="opacity-90">Carregando...</p>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Saúde & Bem-estar</h3>
+          <p class="text-gray-700 mb-4">Calcule seu Índice de Massa Corporal com interface interativa e resposta instantânea.</p>
+          <button onclick="abrirModal('modal-imc')" class="glow-button inline-block px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700" aria-label="Experimentar Calculadora de IMC">
+            Experimentar
+          </button>
+        </div>
+      </div>
+
+      <!-- Projeto 3: Gerenciador de Tarefas -->
+      <div class="project-card bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden shadow-lg">
+        <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+          <span class="text-white text-xl font-bold text-center px-4">Minhas Tarefas</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Organização Pessoal</h3>
+          <p class="text-gray-700 mb-4">Adicione, visualize e remova tarefas — tudo salvo localmente no seu navegador.</p>
+          <button onclick="abrirModal('modal-tarefas')" class="glow-button inline-block px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700" aria-label="Experimentar Gerenciador de Tarefas">
+            Experimentar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modais dos Projetos -->
+  <!-- Modal Clima -->
+  <div id="modal-clima" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden" role="dialog" aria-labelledby="modal-clima-title">
+    <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modal-clima-title" class="text-2xl font-bold text-indigo-800">Busca CEP + Clima</h3>
+          <button onclick="fecharModal('modal-clima')" class="text-gray-500 hover:text-gray-800 text-2xl" aria-label="Fechar modal">&times;</button>
+        </div>
+
+        <!-- Campo de CEP -->
+        <div class="mb-6">
+          <label for="cep-modal" class="block text-lg font-medium text-gray-700 mb-2">Digite o CEP (apenas números)</label>
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              id="cep-modal" 
+              placeholder="Ex: 01001000" 
+              maxlength="8"
+              class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+              oninput="formatarCEP(this)"
+              onkeypress="if(event.key==='Enter') buscarCEP()"
+              aria-describedby="erro-clima"
+            >
+            <button 
+              onclick="buscarCEP()" 
+              id="btn-buscar-modal"
+              class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition flex items-center gap-2"
+              aria-label="Buscar CEP"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <p id="erro-clima" class="mt-2 text-red-600 text-sm hidden"></p>
+        </div>
+
+        <!-- Resultado -->
+        <div id="resultado-clima" class="hidden">
+          <div class="bg-gray-50 rounded-xl p-4 mb-4">
+            <h4 class="font-bold text-gray-800 mb-2">Endereço</h4>
+            <p id="endereco-completo" class="text-gray-700"></p>
+          </div>
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 text-white">
+            <h4 class="font-bold mb-2">Previsão do Tempo</h4>
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-3xl font-bold" id="temp-clima">—°C</p>
+                <p id="condicao-clima" class="opacity-90">Carregando...</p>
+              </div>
+              <i id="icone-clima-modal" class="fas fa-sun text-4xl opacity-80"></i>
             </div>
-            <i id="icone-clima-modal" class="fas fa-sun text-4xl opacity-80"></i>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal IMC -->
-<div id="modal-imc" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden">
-  <div class="bg-white rounded-2xl w-full max-w-md">
-    <div class="p-6">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-green-700">Calculadora de IMC</h3>
-        <button onclick="fecharModal('modal-imc')" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-      </div>
-      <div class="space-y-4">
-        <div>
-          <label class="block mb-2 font-medium">Altura (m):</label>
-          <input type="number" id="altura-imc" step="0.01" class="w-full p-2 border rounded">
+  <!-- Modal IMC -->
+  <div id="modal-imc" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden" role="dialog" aria-labelledby="modal-imc-title">
+    <div class="bg-white rounded-2xl w-full max-w-md">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modal-imc-title" class="text-2xl font-bold text-green-700">Calculadora de IMC</h3>
+          <button onclick="fecharModal('modal-imc')" class="text-gray-500 hover:text-gray-800 text-2xl" aria-label="Fechar modal">&times;</button>
         </div>
-        <div>
-          <label class="block mb-2 font-medium">Peso (kg):</label>
-          <input type="number" id="peso-imc" class="w-full p-2 border rounded">
-        </div>
-        <button onclick="calcularIMC()" class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Calcular IMC</button>
-        <div id="resultado-imc-modal" class="mt-4 text-center text-xl font-bold">Seu IMC aparecerá aqui</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Tarefas -->
-<div id="modal-tarefas" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden">
-  <div class="bg-white rounded-2xl w-full max-w-md">
-    <div class="p-6">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-purple-700">Gerenciador de Tarefas</h3>
-        <button onclick="fecharModal('modal-tarefas')" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
-      </div>
-      <div class="space-y-4">
-        <input type="text" id="nova-tarefa-modal" placeholder="Digite uma nova tarefa..." class="w-full p-2 border rounded" onkeypress="if(event.key==='Enter') adicionarTarefaModal()">
-        <button onclick="adicionarTarefaModal()" class="w-full px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Adicionar</button>
-        <div class="bg-gray-50 rounded p-3 max-h-60 overflow-y-auto" id="lista-tarefas-modal">
-          <!-- Tarefas aparecerão aqui -->
+        <div class="space-y-4">
+          <div>
+            <label for="altura-imc" class="block mb-2 font-medium">Altura (m):</label>
+            <input type="number" id="altura-imc" step="0.01" min="1.0" max="2.5" class="w-full p-2 border rounded" aria-describedby="erro-imc">
+          </div>
+          <div>
+            <label for="peso-imc" class="block mb-2 font-medium">Peso (kg):</label>
+            <input type="number" id="peso-imc" min="30" max="200" class="w-full p-2 border rounded" aria-describedby="erro-imc">
+          </div>
+          <p id="erro-imc" class="text-red-600 text-sm hidden"></p>
+          <button onclick="calcularIMC()" class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" aria-label="Calcular IMC">Calcular IMC</button>
+          <div id="resultado-imc-modal" class="mt-4 text-center text-xl font-bold">Seu IMC aparecerá aqui</div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Scripts dos Projetos -->
-<script>
-  // Funções gerais
-  function abrirModal(id) {
-    document.getElementById(id).classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+  <!-- Modal Tarefas -->
+  <div id="modal-tarefas" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden" role="dialog" aria-labelledby="modal-tarefas-title">
+    <div class="bg-white rounded-2xl w-full max-w-md">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modal-tarefas-title" class="text-2xl font-bold text-purple-700">Gerenciador de Tarefas</h3>
+          <button onclick="fecharModal('modal-tarefas')" class="text-gray-500 hover:text-gray-800 text-2xl" aria-label="Fechar modal">&times;</button>
+        </div>
+        <div class="space-y-4">
+          <input type="text" id="nova-tarefa-modal" placeholder="Digite uma nova tarefa..." class="w-full p-2 border rounded" onkeypress="if(event.key==='Enter') adicionarTarefaModal()" aria-label="Nova tarefa">
+          <button onclick="adicionarTarefaModal()" class="w-full px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700" aria-label="Adicionar tarefa">Adicionar</button>
+          <div class="bg-gray-50 rounded p-3 max-h-60 overflow-y-auto" id="lista-tarefas-modal" role="list">
+            <!-- Tarefas aparecerão aqui -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    // 🔥 Correção: Carregar tarefas ao abrir o modal de tarefas
-    if (id === 'modal-tarefas') {
-      tarefasModal = JSON.parse(localStorage.getItem('tarefas-modal')) || [];
-      renderTarefasModal();
-    }
-  }
+  <!-- Scripts dos Projetos -->
+  <script>
+    // Funções gerais
+    function abrirModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      modal.focus();
 
-  function fecharModal(id) {
-    document.getElementById(id).classList.add('hidden');
-    document.body.style.overflow = 'auto';
-  }
-
-  function formatarCEP(input) {
-    input.value = input.value.replace(/\D/g, '');
-  }
-
-  // === Projeto: CEP + Clima ===
-  async function buscarCEP() {
-    const cep = document.getElementById('cep-modal').value.trim();
-    const erroEl = document.getElementById('erro-clima');
-    const resultadoEl = document.getElementById('resultado-clima');
-    const btn = document.getElementById('btn-buscar-modal');
-
-    if (cep.length !== 8) {
-      erroEl.textContent = 'Digite um CEP válido com 8 dígitos.';
-      erroEl.classList.remove('hidden');
-      return;
+      // Carregar tarefas ao abrir o modal de tarefas
+      if (id === 'modal-tarefas') {
+        tarefasModal = JSON.parse(localStorage.getItem('tarefas-modal')) || [];
+        renderTarefasModal();
+      }
     }
 
-    erroEl.classList.add('hidden');
-    btn.innerHTML = '<span class="loader"></span>';
-    btn.disabled = true;
-
-    try {
-      // ViaCEP
-      const viaRes = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-      const viaData = await viaRes.json();
-      if (viaData.erro) throw new Error('CEP não encontrado.');
-
-      const endereco = `${viaData.logradouro || ''}, ${viaData.bairro || ''} - ${viaData.localidade}/${viaData.uf}`;
-      document.getElementById('endereco-completo').textContent = endereco;
-
-      // Nominatim (coordenadas)
-      const cidade = viaData.localidade;
-      const uf = viaData.uf;
-      const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(cidade + ', ' + uf + ', Brazil')}&format=json&limit=1`);
-      const geoData = await geoRes.json();
-      if (!geoData.length) throw new Error('Cidade não encontrada.');
-
-      const lat = geoData[0].lat;
-      const lon = geoData[0].lon;
-
-      // Open-Meteo
-      const climaRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&timezone=America/Sao_Paulo`);
-      const climaData = await climaRes.json();
-
-      const temp = climaData.current.temperature_2m;
-      const wc = climaData.current.weather_code;
-      const condicoes = {
-        0: { icone: 'sun', texto: 'Céu limpo' },
-        1: { icone: 'sun', texto: 'Ensolarado' },
-        2: { icone: 'cloud-sun', texto: 'Parcialmente nublado' },
-        3: { icone: 'cloud', texto: 'Nublado' },
-        51: { icone: 'cloud-rain', texto: 'Chuva leve' },
-        61: { icone: 'cloud-showers-heavy', texto: 'Chuva' },
-        71: { icone: 'snowflake', texto: 'Neve' },
-        95: { icone: 'bolt', texto: 'Tempestade' }
-      };
-      const cond = condicoes[wc] || { icone: 'cloud', texto: 'Condição desconhecida' };
-
-      document.getElementById('temp-clima').textContent = `${temp}°C`;
-      document.getElementById('condicao-clima').textContent = cond.texto;
-      document.getElementById('icone-clima-modal').className = `fas fa-${cond.icone} text-4xl opacity-80`;
-
-      resultadoEl.classList.remove('hidden');
-
-    } catch (err) {
-      erroEl.textContent = err.message || 'Erro ao buscar dados.';
-      erroEl.classList.remove('hidden');
-    } finally {
-      btn.innerHTML = '<i class="fas fa-search"></i>';
-      btn.disabled = false;
+    function fecharModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.body.style.overflow = 'auto';
     }
-  }
 
-  // === Projeto: IMC ===
-  function calcularIMC() {
-    const altura = parseFloat(document.getElementById('altura-imc').value);
-    const peso = parseFloat(document.getElementById('peso-imc').value);
-    const res = document.getElementById('resultado-imc-modal');
+    function formatarCEP(input) {
+      input.value = input.value.replace(/\D/g, '');
+    }
 
-    if (altura > 0 && peso > 0) {
+    // === Projeto: CEP + Clima ===
+    async function buscarCEP() {
+      const cep = document.getElementById('cep-modal').value.trim();
+      const erroEl = document.getElementById('erro-clima');
+      const resultadoEl = document.getElementById('resultado-clima');
+      const btn = document.getElementById('btn-buscar-modal');
+
+      if (cep.length !== 8) {
+        erroEl.textContent = 'Digite um CEP válido com 8 dígitos numéricos.';
+        erroEl.classList.remove('hidden');
+        return;
+      }
+
+      erroEl.classList.add('hidden');
+      btn.innerHTML = '<span class="loader"></span>';
+      btn.disabled = true;
+
+      try {
+        // ViaCEP
+        const viaRes = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const viaData = await viaRes.json();
+        if (viaData.erro) throw new Error('CEP não encontrado.');
+
+        const endereco = `${viaData.logradouro || ''}, ${viaData.bairro || ''} - ${viaData.localidade}/${viaData.uf}`;
+        document.getElementById('endereco-completo').textContent = endereco;
+
+        // Nominatim (coordenadas)
+        const cidade = viaData.localidade;
+        const uf = viaData.uf;
+        const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(cidade + ', ' + uf + ', Brazil')}&format=json&limit=1`);
+        const geoData = await geoRes.json();
+        if (!geoData.length) throw new Error('Cidade não encontrada.');
+
+        const lat = geoData[0].lat;
+        const lon = geoData[0].lon;
+
+        // Open-Meteo
+        const climaRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&timezone=America/Sao_Paulo`);
+        const climaData = await climaRes.json();
+
+        const temp = climaData.current.temperature_2m;
+        const wc = climaData.current.weather_code;
+        const condicoes = {
+          0: { icone: 'sun', texto: 'Céu limpo' },
+          1: { icone: 'sun', texto: 'Ensolarado' },
+          2: { icone: 'cloud-sun', texto: 'Parcialmente nublado' },
+          3: { icone: 'cloud', texto: 'Nublado' },
+          51: { icone: 'cloud-rain', texto: 'Chuva leve' },
+          61: { icone: 'cloud-showers-heavy', texto: 'Chuva' },
+          71: { icone: 'snowflake', texto: 'Neve' },
+          95: { icone: 'bolt', texto: 'Tempestade' }
+        };
+        const cond = condicoes[wc] || { icone: 'cloud', texto: 'Condição desconhecida' };
+
+        document.getElementById('temp-clima').textContent = `${temp}°C`;
+        document.getElementById('condicao-clima').textContent = cond.texto;
+        document.getElementById('icone-clima-modal').className = `fas fa-${cond.icone} text-4xl opacity-80`;
+
+        resultadoEl.classList.remove('hidden');
+      } catch (err) {
+        erroEl.textContent = err.message === 'Failed to fetch' ? 'Falha na conexão com a API. Verifique sua internet.' : err.message;
+        erroEl.classList.remove('hidden');
+      } finally {
+        btn.innerHTML = '<i class="fas fa-search"></i>';
+        btn.disabled = false;
+      }
+    }
+
+    // === Projeto: IMC ===
+    function calcularIMC() {
+      const altura = parseFloat(document.getElementById('altura-imc').value);
+      const peso = parseFloat(document.getElementById('peso-imc').value);
+      const res = document.getElementById('resultado-imc-modal');
+      const erroEl = document.getElementById('erro-imc');
+
+      erroEl.classList.add('hidden');
+
+      if (!altura || !peso) {
+        erroEl.textContent = 'Por favor, preencha ambos os campos.';
+        erroEl.classList.remove('hidden');
+        return;
+      }
+
+      if (altura < 1.0 || altura > 2.5 || peso < 30 || peso > 200) {
+        erroEl.textContent = 'Valores fora do intervalo esperado (altura: 1.0-2.5m, peso: 30-200kg).';
+        erroEl.classList.remove('hidden');
+        return;
+      }
+
       const imc = peso / (altura * altura);
       let classificacao = '';
       if (imc < 18.5) classificacao = 'Abaixo do peso';
@@ -482,116 +417,98 @@
       else classificacao = 'Obesidade';
 
       res.innerHTML = `IMC: ${imc.toFixed(1)}<br><span class="text-sm">${classificacao}</span>`;
-    } else {
-      res.textContent = 'Valores inválidos';
     }
-  }
 
-  // === Projeto: Tarefas ===
-  let tarefasModal = [];
+    // === Projeto: Tarefas ===
+    let tarefasModal = [];
 
-  function renderTarefasModal() {
-    const lista = document.getElementById('lista-tarefas-modal');
-    lista.innerHTML = '';
-    tarefasModal.forEach((tarefa, i) => {
-      const div = document.createElement('div');
-      div.className = 'flex justify-between items-center py-1';
-      div.innerHTML = `
-        <span>${tarefa}</span>
-        <button onclick="removerTarefaModal(${i})" class="text-red-500 hover:text-red-700">
-          <i class="fas fa-trash"></i>
-        </button>
-      `;
-      lista.appendChild(div);
-    });
-  }
+    function renderTarefasModal() {
+      const lista = document.getElementById('lista-tarefas-modal');
+      lista.innerHTML = '';
+      tarefasModal.forEach((tarefa, i) => {
+        const div = document.createElement('div');
+        div.className = 'flex justify-between items-center py-1';
+        div.setAttribute('role', 'listitem');
+        div.innerHTML = `
+          <span>${tarefa}</span>
+          <button onclick="removerTarefaModal(${i})" class="text-red-500 hover:text-red-700" aria-label="Remover tarefa ${tarefa}">
+            <i class="fas fa-trash"></i>
+          </button>
+        `;
+        lista.appendChild(div);
+      });
+    }
 
-  function adicionarTarefaModal() {
-    const input = document.getElementById('nova-tarefa-modal');
-    const texto = input.value.trim();
-    if (texto) {
-      tarefasModal.push(texto);
+    function adicionarTarefaModal() {
+      const input = document.getElementById('nova-tarefa-modal');
+      const texto = input.value.trim();
+      if (texto) {
+        tarefasModal.push(texto);
+        localStorage.setItem('tarefas-modal', JSON.stringify(tarefasModal));
+        input.value = '';
+        renderTarefasModal();
+      } else {
+        input.focus();
+      }
+    }
+
+    function removerTarefaModal(index) {
+      tarefasModal.splice(index, 1);
       localStorage.setItem('tarefas-modal', JSON.stringify(tarefasModal));
-      input.value = '';
       renderTarefasModal();
     }
-  }
+  </script>
 
-  function removerTarefaModal(index) {
-    tarefasModal.splice(index, 1);
-    localStorage.setItem('tarefas-modal', JSON.stringify(tarefasModal));
-    renderTarefasModal();
-  }
-</script>
-
-<style>
-  .loader {
-    border: 2px solid #f3f3f3;
-    border-top: 2px solid #3498db;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    animation: spin 1s linear infinite;
-    display: inline-block;
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-</style>
-
-<!-- Repositórios no GitHub -->
-<section id="repositorios" class="py-20 px-6 bg-gray-50">
-  <div class="max-w-5xl mx-auto text-center mb-16">
-    <h2 class="text-4xl font-bold title-underline inline-block mb-6">Repositórios Públicos</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Projetos e atividades desenvolvidas durante meus estudos e cursos.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-    <!-- Repositório C# -->
-    <a href="https://github.com/Polaroide663/C-Atividades" target="_blank" class="project-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-      <div class="flex items-center mb-4">
-        <i class="fab fa-github text-3xl text-gray-800 mr-3"></i>
-        <h3 class="text-xl font-bold text-gray-800">Atividades em C#</h3>
-      </div>
-      <p class="text-gray-600 mb-4">
-        Repositório com exercícios e projetos práticos desenvolvidos em C# durante o curso técnico.
-      </p>
-      <div class="flex items-center text-sm text-gray-500">
-        <i class="fas fa-code mr-2"></i> C# • .NET • Console Apps
-      </div>
-    </a>
-
-    <!-- Repositório Web -->
-    <a href="https://github.com/Polaroide663/Projetos" target="_blank" class="project-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-      <div class="flex items-center mb-4">
-        <i class="fab fa-github text-3xl text-gray-800 mr-3"></i>
-        <h3 class="text-xl font-bold text-gray-800">Projetos Web</h3>
-      </div>
-      <p class="text-gray-600 mb-4">
-        Atividades de programação web com HTML, CSS, JavaScript e integração de APIs.
-      </p>
-      <div class="flex items-center text-sm text-gray-500">
-        <i class="fas fa-laptop-code mr-2"></i> HTML • CSS • JS • APIs
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- Exemplo de Código Python -->
-<section id="codigo-python" class="py-20 px-6 bg-white">
-  <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold title-underline inline-block mb-6">Exemplo de Código Python</h2>
-      <p class="text-gray-600">
-        Um trecho de código limpo e funcional que demonstra boas práticas de programação.
+  <!-- Repositórios no GitHub -->
+  <section id="repositorios" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-5xl mx-auto text-center mb-16">
+      <h2 class="text-4xl font-bold title-underline inline-block mb-6">Repositórios Públicos</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Projetos e atividades desenvolvidas durante meus estudos e cursos.
       </p>
     </div>
 
-    <div class="bg-gray-900 text-green-400 p-6 rounded-2xl font-mono text-sm overflow-x-auto">
-      <pre><code># Script para análise de logs de erro
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <a href="https://github.com/Polaroide663/C-Atividades" target="_blank" class="project-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+        <div class="flex items-center mb-4">
+          <i class="fab fa-github text-3xl text-gray-800 mr-3"></i>
+          <h3 class="text-xl font-bold text-gray-800">Atividades em C#</h3>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Repositório com exercícios e projetos práticos desenvolvidos em C# durante o curso técnico.
+        </p>
+        <div class="flex items-center text-sm text-gray-600">
+          <i class="fas fa-code mr-2"></i> C# • .NET • Console Apps
+        </div>
+      </a>
+
+      <a href="https://github.com/Polaroide663/Projetos" target="_blank" class="project-card bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+        <div class="flex items-center mb-4">
+          <i class="fab fa-github text-3xl text-gray-800 mr-3"></i>
+          <h3 class="text-xl font-bold text-gray-800">Projetos Web</h3>
+        </div>
+        <p class="text-gray-700 mb-4">
+          Atividades de programação web com HTML, CSS, JavaScript e integração de APIs.
+        </p>
+        <div class="flex items-center text-sm text-gray-600">
+          <i class="fas fa-laptop-code mr-2"></i> HTML • CSS • JS • APIs
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Exemplo de Código Python -->
+  <section id="codigo-python" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold title-underline inline-block mb-6">Exemplo de Código Python</h2>
+        <p class="text-gray-700">
+          Um trecho de código limpo e funcional que demonstra boas práticas de programação.
+        </p>
+      </div>
+
+      <div class="bg-gray-900 text-green-400 p-6 rounded-2xl font-mono text-sm overflow-x-auto">
+        <pre><code># Script para análise de logs de erro
 import re
 from datetime import datetime
 
@@ -610,7 +527,7 @@ def contar_erros_por_data(arquivo_log: str, data_alvo: str) -> int:
         with open(arquivo_log, 'r', encoding='utf-8') as f:
             linhas = f.readlines()
         
-        padrao = rf"{data_alvo}.*ERROR"
+        padrao = rf"^{data_alvo}\s.*ERROR"
         erros = [linha for linha in linhas if re.search(padrao, linha)]
         return len(erros)
     
@@ -622,14 +539,15 @@ def contar_erros_por_data(arquivo_log: str, data_alvo: str) -> int:
 if __name__ == "__main__":
     data = datetime.today().strftime('%Y-%m-%d')
     total = contar_erros_por_data('app.log', data)
-    print(f"Erros hoje ({data}): {total}")</code></pre>
-    </div>
+    print(f"Erros hoje ({data}): {total}")
+</code></pre>
+      </div>
 
-    <div class="mt-6 text-center text-gray-600">
-      <p>Este script lê um arquivo de log e conta ocorrências de erros em uma data específica — útil para monitoramento de sistemas.</p>
+      <div class="mt-6 text-center text-gray-700">
+        <p>Este script lê um arquivo de log e conta ocorrências de erros em uma data específica — útil para monitoramento de sistemas.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contato -->
   <section id="contato" class="py-20 bg-gradient-to-r from-indigo-900 to-purple-900 text-white px-6">
@@ -639,11 +557,11 @@ if __name__ == "__main__":
         Estou sempre aberto a novos desafios, colaborações e oportunidades de aprendizado.
       </p>
       <div class="flex flex-wrap justify-center gap-6">
-        <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="glow-button px-6 py-3 bg-green-500 rounded-full font-semibold hover:bg-green-600 transition flex items-center gap-2">
+        <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="glow-button px-6 py-3 bg-green-500 rounded-full font-semibold hover:bg-green-600 transition flex items-center gap-2" aria-label="Contato via WhatsApp">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
-        <a href="https://www.linkedin.com/in/guilherme-m-923912349" class="glow-button px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-700 transition flex items-center gap-2">
-        <i class="fab fa-linkedin"></i> LinkedIn
+        <a href="https://www.linkedin.com/in/guilherme-m-923912349" class="glow-button px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-700 transition flex items-center gap-2" aria-label="Perfil no LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn
         </a>
       </div>
     </div>
@@ -653,17 +571,17 @@ if __name__ == "__main__":
   <footer class="bg-gray-900 text-white py-8 text-center">
     <p>© 2025 Guilherme. Todos os direitos reservados.</p>
     <div class="mt-4 flex justify-center space-x-6">
-      <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="hover:text-green-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
-      <a href="https://www.instagram.com/guilherme_xiix/" class="hover:text-pink-400 transition"><i class="fab fa-instagram text-xl"></i></a>
-      <a href="https://github.com/Polaroide663" class="hover:text-gray-300 transition"><i class="fab fa-github text-xl"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="hover:text-green-400 transition" aria-label="WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+      <a href="https://www.instagram.com/guilherme_xiix/" class="hover:text-pink-400 transition" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
+      <a href="https://github.com/Polaroide663" class="hover:text-gray-300 transition" aria-label="GitHub"><i class="fab fa-github text-xl"></i></a>
     </div>
   </footer>
 
   <!-- Ícones Flutuantes (Mobile: barra inferior) -->
   <div class="md:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 flex gap-6 bg-gray-800/90 backdrop-blur rounded-full px-6 py-3">
-    <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="text-green-400 text-2xl"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/guilherme_xiix/" class="text-pink-400 text-2xl"><i class="fab fa-instagram"></i></a>
-    <a href="https://github.com/Polaroide663" class="text-gray-300 text-2xl"><i class="fab fa-github"></i></a>
+    <a href="https://api.whatsapp.com/send/?phone=5579998122023&text&type=phone_number&app_absent=0" class="text-green-400 text-2xl" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/guilherme_xiix/" class="text-pink-400 text-2xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/Polaroide663" class="text-gray-300 text-2xl" aria-label="GitHub"><i class="fab fa-github"></i></a>
   </div>
 
   <!-- ScrollReveal para animações ao rolar -->
@@ -673,12 +591,5 @@ if __name__ == "__main__":
     ScrollReveal().reveal('.project-card', { delay: 300, interval: 150, distance: '30px', origin: 'bottom' });
     ScrollReveal().reveal('.floating-icon', { delay: 200, interval: 100, scale: 0.9, opacity: 0 });
   </script>
-
-  
-
 </body>
-
 </html>
-
-
-
